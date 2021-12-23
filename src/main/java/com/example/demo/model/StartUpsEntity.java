@@ -1,10 +1,10 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -28,8 +28,15 @@ public class StartUpsEntity {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ_GENERATOR")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int s_no;
+	@Column(name="s_no")
+	private int sNo;
+	
+	@Column(name="s_name")
 	private String sName;
+	
+	@Column(name="s_category")
 	private String sCategory;
+	
+	@Column(name="s_tech_type")
 	private String sTechType;
 }
