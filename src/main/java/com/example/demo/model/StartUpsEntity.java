@@ -17,26 +17,37 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-//@SequenceGenerator(
-//		name = "SNO_SEQ_GENERATOR",
-//        sequenceName = "USER_SEQ", // 시퀸스 명
-//        initialValue = 1, // 초기 값
-//        allocationSize = 1 // 미리 할당 받을 시퀸스 수
-//)
-@Table(name = "startup")
+@Table(name = "STARTUP")
 public class StartUpsEntity {
 	@Id
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ_GENERATOR")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="s_no")
-	private int sNo;
+	@Column(name="S_NO")
+	private int no;
 	
-	@Column(name="s_name")
-	private String sName;
+	@Column(name="S_NAME", nullable = false)
+	private String name;
 	
-	@Column(name="s_category")
-	private String sCategory;
+	@Column(name="S_CATEGORY", nullable = false)
+	private String category;
 	
-	@Column(name="s_tech_type")
-	private String sTechType;
+	@Column(name="S_TECH_TYPE")
+	private String techType;
+	
+	@Column(name="S_MAIN_SERVICE")
+	private String mainService;
+	
+	@Column(name="S_EMPLOYEE_NUM")
+	private String employeeNum;
+	
+	@Column(name="S_LOCATION")
+	private String location;
+	
+	@Column(name="S_SERVICE_DETL")
+	private String serviceDetl;
+	
+	@Column(name="S_SPECIAL_FEATURE")
+	private String specialFeature;
+	
+	@Column(name="S_RESEARCHED_TIME")
+	private String researchedTime;
 }

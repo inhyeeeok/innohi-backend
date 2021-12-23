@@ -36,15 +36,15 @@ public class TodoService {
 	public int testStartupService() {
 		// TodoEntity 생성
 //		StartUpsEntity entity = StartUpsEntity.builder().sName("Test").build();
-		StartUpsEntity entity = StartUpsEntity.builder().sName("Test").sCategory("Test").sTechType("Test").build();
+		StartUpsEntity entity = StartUpsEntity.builder().name("Test").category("Test").techType("Test").build();
 		// TodoEntity 저장
-		System.out.println("test1 :"+entity.getSNo());
+		System.out.println("test1 :"+entity.getNo());
 		strepository.save(entity);
-		System.out.println("test2 :"+entity.getSNo());
+		System.out.println("test2 :"+entity.getNo());
 		// TodoEntity 검색
 //		StartUpsEntity savedEntity = strepository.findBysNo(entity.getSNo()).get(0);
-		StartUpsEntity savedEntity = strepository.findBysName(entity.getSName()).get(0);
-		return savedEntity.getSNo();
+		StartUpsEntity savedEntity = strepository.findByname(entity.getName()).get(0);
+		return savedEntity.getNo();
 	}
 	
 	public List<StartUpsEntity> selectMemberService() throws Exception {

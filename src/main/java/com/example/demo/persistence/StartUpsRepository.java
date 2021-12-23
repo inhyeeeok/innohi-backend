@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface StartUpsRepository extends JpaRepository<StartUpsEntity, String>{
 	
-	List<StartUpsEntity> findBysName(String sName);
+	List<StartUpsEntity> findByname(String name);
 
-	List<StartUpsEntity> findBysNo(int sNo);
+	List<StartUpsEntity> findByno(int no);
 }
