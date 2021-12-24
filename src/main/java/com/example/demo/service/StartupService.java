@@ -34,16 +34,20 @@ public class StartupService {
 //		return entity;
 //	}
 	
-	public List<StartUpsEntity> selectStartupService(HashMap<String, Object> paramData, Integer offset, Integer limit) throws Exception {
+	public List<StartUpsEntity> selectStartupService(String menu, String keyword, Integer offset, Integer limit) throws Exception {
 		List<StartUpsEntity> entity = null;
 		//PageRequest.of(0, 5, Sort.by("price").descending().and(Sort.by("name")));
+		System.out.println(menu);
+		System.out.println(keyword);
+		Pageable pageWithElements = PageRequest.of(offset, limit, Sort.by("no"));
 
-		if(paramData == null){
+		if(menu == ""){
+			System.out.println("ttttt!!");
 			entity = startupRepo.findAll();
-		}else{
-		//	Pageable pageWithElements = PageRequest.of(offset, limit, Sort.by("no"));
-			Pageable pageWithElements = PageRequest.of(0, 10, Sort.by("no"));
-			entity = startupRepo.findAllBycategory("의료", pageWithElements);
+		}else if(menu.equals("null")){
+			System.out.println("null!!");
+		}else if(menu.equals("category")){
+			entity = startupRepo.findAllBycategory(keyword, pageWithElements);
 		}
 		return entity;
 	}

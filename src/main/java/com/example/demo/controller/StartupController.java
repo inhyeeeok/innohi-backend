@@ -53,18 +53,11 @@ public class StartupController {
 	 */
 	
 	@RequestMapping("/findStartup")
-	public ResponseEntity<?> selectStartup(@RequestParam HashMap<String, Object> paramData, @RequestParam Integer offset, Integer limit) throws Exception {
-//		if(offset == null){
-//			offset = defaultOffset;
-//		}
-//		
-//		if(limit == null){
-//			limit = defaultLimit;
-//		}
+	public ResponseEntity<?> selectStartup(@RequestParam(defaultValue = "null") String menu, String keyword, @RequestParam(defaultValue="0") Integer offset, @RequestParam(defaultValue="10") Integer limit) throws Exception {
 		
 		System.out.println("test :"+ offset);
 		
-		List<StartUpsEntity> res = service.selectStartupService(paramData, offset, limit);
+		List<StartUpsEntity> res = service.selectStartupService(menu, keyword, offset, limit);
 		ResponseDTO<StartUpsEntity> response = ResponseDTO.<StartUpsEntity>builder().data(res).build();
 		return ResponseEntity.ok().body(response);
 	}
