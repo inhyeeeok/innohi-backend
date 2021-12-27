@@ -24,8 +24,8 @@ public class Swagger2Config {
 	
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("제목 작성")
-				.version("버전 작성")
+				.title("이노하이 API Documents")
+				.version("v1")
 				.description("설명 작성")
 				.license("라이센스 작성")
 				.licenseUrl("라이센스 URL 작성")
