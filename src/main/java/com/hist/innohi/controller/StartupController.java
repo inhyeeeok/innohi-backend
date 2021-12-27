@@ -4,6 +4,10 @@ import com.hist.innohi.dto.ResponseDTO;
 import com.hist.innohi.model.StartUpEntity;
 import com.hist.innohi.service.StartupService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+//@Api(value="스타트업 컨트롤러")
 @RestController
 @RequestMapping("api/v1/startup")
 public class StartupController {
@@ -49,6 +54,11 @@ public class StartupController {
 	 */
 	
 	@GetMapping(value="/findAllStartup", produces="application/json; charset=UTF-8")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name="keyword", value="정렬순서", defaultValue="no", required=true)
+		, @ApiImplicitParam(name="offset", value="시작값", defaultValue="0")
+		, @ApiImplicitParam(name="limit", value="제한값", defaultValue="10")
+	})
 	public HttpEntity<?> selectAllStartup(@RequestParam(defaultValue="no", required=true) String keyword, @RequestParam(defaultValue="0") Integer offset, @RequestParam(defaultValue="10") Integer limit) throws Exception {
 		List<StartUpEntity> res = service.selectAllStartupService(keyword, offset, limit);
 		ResponseDTO<StartUpEntity> response = ResponseDTO.<StartUpEntity>builder().data(res).successYn(true).build();
