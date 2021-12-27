@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,6 +29,7 @@ public class StartUpEntity {
 	private String name;
 	
 	@Column(name="S_CATEGORY", nullable = false)
+	@ApiModelProperty(example="의료")
 	private String category;
 	
 	@Column(name="S_TECH_TYPE", nullable = false)
