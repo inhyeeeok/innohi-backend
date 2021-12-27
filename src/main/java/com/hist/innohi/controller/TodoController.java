@@ -1,10 +1,11 @@
-package com.example.demo.controller;
+package com.hist.innohi.controller;
 
-import com.example.demo.dto.ResponseDTO;
-import com.example.demo.dto.TodoDTO;
-import com.example.demo.model.StartUpsEntity;
-import com.example.demo.model.TodoEntity;
-import com.example.demo.service.TodoService;
+import com.hist.innohi.dto.ResponseDTO;
+import com.hist.innohi.dto.TodoDTO;
+import com.hist.innohi.model.StartUpEntity;
+import com.hist.innohi.model.TodoEntity;
+import com.hist.innohi.service.TodoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -43,8 +44,8 @@ public class TodoController {
 	}
 	
 	@GetMapping("/test2")
-	public List<StartUpsEntity> testStartups2() throws Exception {
-		List<StartUpsEntity> str = service.selectMemberService(); // 테스트 서비스 사용
+	public List<StartUpEntity> testStartups2() throws Exception {
+		List<StartUpEntity> str = service.selectMemberService(); // 테스트 서비스 사용
 		return str;
 	}
 }

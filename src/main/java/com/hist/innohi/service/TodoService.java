@@ -1,14 +1,14 @@
 
-package com.example.demo.service;
+package com.hist.innohi.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.StartUpsEntity;
-import com.example.demo.model.TodoEntity;
-import com.example.demo.persistence.StartUpsRepository;
-import com.example.demo.persistence.TodoRepository;
+import com.hist.innohi.model.StartUpEntity;
+import com.hist.innohi.model.TodoEntity;
+import com.hist.innohi.persistence.StartUpRepository;
+import com.hist.innohi.persistence.TodoRepository;
 
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +21,7 @@ public class TodoService {
 	private TodoRepository repository;
 	
 	@Autowired
-	private StartUpsRepository strepository;
+	private StartUpRepository strepository;
 
 	public String testService() {
 		// TodoEntity 생성
@@ -36,19 +36,19 @@ public class TodoService {
 	public int testStartupService() {
 		// TodoEntity 생성
 //		StartUpsEntity entity = StartUpsEntity.builder().sName("Test").build();
-		StartUpsEntity entity = StartUpsEntity.builder().name("Test").category("Test").techType("Test").build();
+		StartUpEntity entity = StartUpEntity.builder().name("Test").category("Test").techType("Test").build();
 		// TodoEntity 저장
 		System.out.println("test1 :"+entity.getNo());
 		strepository.save(entity);
 		System.out.println("test2 :"+entity.getNo());
 		// TodoEntity 검색
 //		StartUpsEntity savedEntity = strepository.findBysNo(entity.getSNo()).get(0);
-		StartUpsEntity savedEntity = strepository.findByname(entity.getName()).get(0);
+		StartUpEntity savedEntity = strepository.findByname(entity.getName()).get(0);
 		return savedEntity.getNo();
 	}
 	
-	public List<StartUpsEntity> selectMemberService() throws Exception {
-		List<StartUpsEntity> entity = strepository.findAll();
+	public List<StartUpEntity> selectMemberService() throws Exception {
+		List<StartUpEntity> entity = strepository.findAll();
 		return entity;
 	}
 	

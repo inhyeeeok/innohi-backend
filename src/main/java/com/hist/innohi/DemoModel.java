@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.hist.innohi;
 
 import lombok.Builder;
 import lombok.NonNull;

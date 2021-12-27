@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.hist.innohi.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "STARTUP")
-public class StartUpsEntity {
+public class StartUpEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="S_NO")
@@ -30,7 +30,7 @@ public class StartUpsEntity {
 	@Column(name="S_CATEGORY", nullable = false)
 	private String category;
 	
-	@Column(name="S_TECH_TYPE")
+	@Column(name="S_TECH_TYPE", nullable = false)
 	private String techType;
 	
 	@Column(name="S_MAIN_SERVICE")

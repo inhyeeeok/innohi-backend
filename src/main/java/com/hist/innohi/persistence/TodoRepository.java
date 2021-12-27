@@ -1,8 +1,9 @@
-package com.example.demo.persistence;
+package com.hist.innohi.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.example.demo.model.TodoEntity;
+
+import com.hist.innohi.model.TodoEntity;
 
 import java.util.List;
 
