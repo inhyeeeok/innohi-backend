@@ -5,6 +5,8 @@ import com.hist.innohi.model.BoardEntity;
 import com.hist.innohi.service.BoardService;
 import com.hist.innohi.service.StartupService;
 
+import io.swagger.annotations.ApiOperation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,7 @@ public class BoardController {
 	 * 
 	 */
 	
+	@ApiOperation(value="이노하이 게시판 정보 생성", notes="test")
 	@GetMapping(value="/selectBoard", produces="application/json; charset=UTF-8")
 	public HttpEntity<?> selectBoard(@RequestParam(defaultValue="0") Integer offset, @RequestParam(defaultValue="10") Integer limit)  throws Exception {
 		List<BoardEntity> res = service.selectBoardService(offset, limit);
