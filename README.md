@@ -13,3 +13,5 @@ junit|20220103|권인혁|4.13|junit:4|
 [API Documents]
 
 http://localhost:8080/swagger-ui.html
+
+http://test-env-1.eba-kpdvwiie.ap-northeast-2.elasticbeanstalk.com/swagger-ui.html#/
