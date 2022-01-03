@@ -18,5 +18,7 @@ http://test-env-1.eba-kpdvwiie.ap-northeast-2.elasticbeanstalk.com/swagger-ui.ht
 
 [코드 실행]
 
+```
 $ cd <프로젝트 디렉터리>/demo
 $ ./gradlew bootRun
+```
