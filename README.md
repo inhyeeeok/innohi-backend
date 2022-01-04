@@ -11,7 +11,7 @@ API Documentation|swagger|20211227|권인혁|2.9.2|springfox-swagger2|
 API Documentation|swagger-ui|20211227|권인혁|2.9.2|springfox-swagger-ui|
 Test|junit|20220103|권인혁|4.13|junit:4|
 Server Build|Gradle|20220104|권인혁|||
-Database|H2 Database, MySQL|20220104|권인혁||
+Database|H2 Database, MySQL|20220104|권인혁|||
 
 [API Documents]
 
