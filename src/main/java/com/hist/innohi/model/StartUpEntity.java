@@ -29,7 +29,7 @@ public class StartUpEntity {
 	private String name;
 	
 	@Column(name="S_CATEGORY", nullable = false)
-	@ApiModelProperty(example="의료")
+	@ApiModelProperty(value = "분류", example = "의료", required = true)
 	private String category;
 	
 	@Column(name="S_TECH_TYPE", nullable = false)

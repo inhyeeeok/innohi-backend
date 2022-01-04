@@ -3,6 +3,8 @@ package com.hist.innohi.dto;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.List;
+
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
