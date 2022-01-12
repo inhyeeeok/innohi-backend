@@ -1,6 +1,6 @@
 # innohi-backend
 
-[개발스택]
+## [개발스택]
 
 |컴포넌트|적용기술|날짜|작성자|버전|비고|
 |---|---|------|---|---|-----|
@@ -19,9 +19,16 @@ http://localhost:5000/swagger-ui.html
 
 http://test-env-1.eba-kpdvwiie.ap-northeast-2.elasticbeanstalk.com/swagger-ui.html#/
 
-[코드 실행]
+## [코드 실행]
 
 ```
-$ cd <프로젝트 디렉터리>/demo
+$ cd <프로젝트 디렉터리>/innohi_backend
 $ ./gradlew bootRun
+```
+
+## [운영 및 배포]
+
+```
+$ cd <프로젝트 디렉터리>/innohi_backend
+$ ./gradle build
 ```
