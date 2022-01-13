@@ -12,11 +12,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-        .allowedOrigins("http://localhost:3000") // in Local App
-        .allowedOrigins("https://main.dxtribtwfr2oa.amplifyapp.com") // AWS Amplify WebApp
-        .allowedMethods("GET", "POST", "DELETE", "PATCH", "OPTIONS")
-        .allowedHeaders("*")
-        .allowCredentials(true)
-        .maxAge(MAX_AGE_SECS);
+                .allowedOrigins(
+                        "http://localhost:3000",                    // in Local App
+                        "https://main.dxtribtwfr2oa.amplifyapp.com" // AWS Amplify WebApp
+                )
+                .allowedMethods("GET", "POST", "DELETE", "PATCH", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true)
+                .maxAge(MAX_AGE_SECS);
     } 
 }
